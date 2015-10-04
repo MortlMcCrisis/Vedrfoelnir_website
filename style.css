@@ -1,0 +1,275 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #000000;
+	color: #FFF;
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+p {
+	margin: 20px 0px 20px 0px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+a {
+	color: #424242;
+	font-size: 14px;
+}
+
+a:hover {
+	color: #5D5D5D;
+}
+
+#newsletter{
+	margin-top: 50px;
+}
+
+#newsletter-font{
+	color: #EEEEEE;
+	font-size: 16px;
+}
+
+td {
+	padding-top: 10px;
+	padding-right: 10px;
+	vertical-align:top
+}
+
+#page {
+	position: relative;
+	margin-left: auto;
+    margin-right: auto;
+    width: 1256px;
+	background-image: url(xn--vedrflnir-47a.de/images/bottom.png),
+		url(http://xn--vedrflnir-47a.de/images/seamless/backgroundTop.png),
+		url(images/seamless/backgroundSeamless.png);
+	background-repeat: no-repeat,
+		no-repeat,
+		repeat-y;
+	background-position: bottom,
+		50% 0%,
+	 	top;
+	 	padding-bottom: 60px;
+}
+
+#logo {
+	background-image: url('images/logo.png');
+	background-repeat: no-repeat;
+	height: 505px;
+	width: 849px;
+	position: absolute;
+	margin-left: 29px;
+}
+
+#container {
+	margin: 0px auto;
+	width: 873px;
+	position: relative;
+	top: 59px;
+	padding-bottom: 10px;
+}
+
+#pageHeader {
+	background-image: url('images/header.png');
+	background-repeat: no-repeat;
+	background-position: -163px -59px;
+	height: 505px;
+	width: 872px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu {
+	width: 873px;
+	height: 70px;
+	position: relative;
+	top: 435px;
+	/*background-image:url(images/barBackground.png);*/
+}
+
+#menu li {
+	position: absolute;
+	top: 19px;
+	list-style-type: none;
+}
+
+#menuItem1 {
+	left: 60px;
+}
+
+#menuItem2 {
+	left: 185px;
+}
+
+#menuItem3 {
+	left: 330px;
+}
+
+#menuItem4 {
+	left: 455px;
+}
+
+#menuItem5 {
+	left: 565px;
+}
+
+#menu a {
+	font-family: 'Caesar Dressing', cursive;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+}
+
+#menu a:hover {
+	color: #384453;
+}
+
+#content {
+	width: 873px;
+	background-image: url(images/contentBackground.png);
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#left {
+	float: left;
+	width: 435px;
+	display: inline;
+	margin-left: 60px;
+}
+
+#impressum{
+	width: 753px;
+	margin-right: 60px;
+}
+
+#bandPic{
+	padding-top: 30px;
+	width:100%;
+}
+
+#right {
+	float: right;
+	width: 275px;
+	height: auto;
+	margin: 0px 55px 20px 0px;
+	display: inline;
+}
+
+#footer {
+	width: 873px;
+	text-align: center;
+	margin-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 11px;
+	background-color: #858485;
+}
+
+#footer a {
+	font-size: 11px;
+}
+
+.quickIconBox {
+	position: relative;
+	padding-right: 15px;
+}
+
+.quickIcon {
+	float: right;
+	padding-top: 25px;
+	padding-right: 30px;
+}
+
+.quickIcon img {
+	filter:
+		url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: gray;
+	-webkit-filter: grayscale(100%);
+}
+
+.quickIcon img:hover {
+	filter: none;
+	-webkit-filter: grayscale(0%);
+}
+
+.navigation {
+	background-image: url(images/navigation.png);
+	height: 18px;
+	background-repeat: no-repeat;
+}
+
+.clear {
+	clear: both;
+}
+
+.video {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.news {
+	border: none;
+	border-bottom: 1px solid #FFFFFF;
+	padding-bottom: 20px;
+}
+
+.maingig{
+	font-style: italic;
+	padding-top: 20px;
+	font-size: 14px;
+}
+
+.concert {
+	margin-top: 20px;
+}
+
+.gig {
+	font-style: italic;
+	padding-top: 20px;
+	font-size: 13px;
+}
+
+.right {
+	text-align: right;
+}
+
+.contact {
+	border: none;
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	margin-top: 100px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.facebookFrameContainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	height: 80px;
+	width: 447px;
+	background-color: #ffffff;
+	webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.facebookFrame {
+	margin: 10px;
+	border: none;
+	width: 100%;
+	height: 100%;
+	-border-radius: 5px;
+}

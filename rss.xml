@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+		<title>Vedrfoelnir RSS-Feed</title>
+		<link>http://www.vedrfoelnir.de</link>
+		<description>Vedrfoelnir - Extreme Folk Metal</description>
+		<language>de-de</language>
+		<copyright>2014 by Vedrfoelnir</copyright>
+		<image>
+			<title>Vedrfoelnir</title>
+			<url>http://webmasterparadies.de/logo.jpg</url>
+			<link>http://www.vedrfoelnir.de</link>
+		</image>
+				<item>
+			<title>Sturmnacht</title>
+			<link>http://www.vedrfoelnir.de/news</link>
+			<description>Am 2. Mai ist es wieder soweit. Zusammen mit Fylgja und Angur spielen wir bei der Sturmnacht in Heuchlingen/Gerstetten. Wir freuen uns schon drauf und sind gespannt ob wir vielleicht sogar ein bekannte Gesichter sehen werden.
+			</description>
+		</item>
+		<item>
+			<title>Konzert in Kollnau</title>
+			<link>http://www.vedrfoelnir.de/news</link>
+			<description>Nach über einem Jahr unfreiwilliger Pause, treten wir nun endlich wieder auf. Nachdem unser Proberaum in Freiburg abgerissen wurde, konnten wir einen neuen in Kollnau im Haus der Jugend finden. Um diesen ordentlich einzuweihen veranstalten wir zusammen mit Crayven und Painis hier am 6. März ein Konzert. Wer also Bock auf drei gute Bands und ordentlich Metal hat, ist hier genau richtig! Lasst uns zusammen das HdJ (im metaphorischen Sinne) abreißen!
+			</description>
+		</item>
+		<item>
+			<title>Eigene Homepage online</title>
+			<link>http://www.vedrfoelnir.de/news</link>
+			<description>Vedrfölnir hat nun endlich eine höchsteigene und
+				höchstoffizielle Homepage! Nachdem wir bisher nur Facebook und
+				Youtube als "Online-Repräsentationsplattformen" hatten, können wir
+				dem nun noch eine obligatorische und vor allem auch seriöse Homepage
+				hinzufügen. Hier findet ihr alles Wichtige und Wissenswerte was es
+				über uns zu erfahren gibt! Seien es unsere Anfänge, unsere
+				bisherigen und kommenden Auftritte oder ausgewählte Songs und
+				Konzertmitschnitte. Ebenso gibt es eine Galerie und natürlich werdet
+				ihr auch hier immer auf den neuesten Stand gebracht! Ein Klick lohnt
+				sich also Also stay tuned and metal.
+				PS: Die Homepage ist natürlich nicht das einzig Neue was wir zu
+				verkünden haben. Obwohl es das letzte Jahr recht ruhig um uns war,
+				bedeutet das nicht, dass wir untätig waren! Mehr sei an dieser
+				Stelle aber noch nicht verraten. Ihr sollt, dürft, könnt und müsst
+				spekulieren!
+			</description>
+		</item>
+		<pubDate>Sat, 22 Nov 2014 12:00:00 GMT</pubDate>
+	</channel>
+</rss>
