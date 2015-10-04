@@ -1,8 +1,19 @@
 <?php include 'header.php'; ?>
 
-<h2>Offene Todos</h2>
-</br></br>
-<a href="/inside/page_newTodo.php" class="btn btn-default">Neues Todo</a>
+<?php 
+require_once 'databaseConnector.php';
+
+$listId = 1;
+if (isset($_GET['listId'])){
+	$listId = $_GET['listId'];
+}
+
+$listEntry = getListById($listId);
+?>
+
+<h2><?php echo $listEntry->name; ?></h2>
+</br></br> 
+<a href="/inside/page_newTodo.php?listId=<?php echo $listId ?>" class="btn btn-default">Neues Todo</a>
 </br></br>
 <div class="row">
 	<div class="col-md-12">
@@ -17,9 +28,9 @@
 			</thead>
 			<tbody>
 				<?php
-					include 'databaseConnector.php';
+					require_once 'databaseConnector.php';
 					
-					$todos = getOpenTodos(0);
+					$todos = getOpenTodos($listId);
 					
 					while($row = mysql_fetch_object($todos)){
 						echo "<tr>";

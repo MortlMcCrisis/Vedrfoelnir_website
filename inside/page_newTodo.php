@@ -7,7 +7,7 @@ $description = "";
 
 if (isset($_GET['id'])) {
 	
-	include 'databaseConnector.php';
+	require_once 'databaseConnector.php';
 	
 	$id = $_GET['id'];
 	
@@ -23,8 +23,9 @@ if (isset($_GET['id'])) {
 </br></br>
 <div class="row">
 	<div class="col-md-12">
-		<form role="form" action="action_newTodo.php">
+		<form role="form" action="action_newTodo.php?listId=<?php echo $listId ?>">
 			<?php echo $idParam; ?>
+			<input type="hidden" name="listId" value="<?php echo $_GET['listId']; ?>">
 			<div class="form-group">
 				<label for="name">Name:</label>
 				<input type="text" class="form-control" id="name" name="name" value="<?php echo $name; ?>"></input>

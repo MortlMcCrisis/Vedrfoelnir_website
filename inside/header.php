@@ -37,7 +37,24 @@
           </button>
           <a class="navbar-brand" href="#">Vedrf&ouml;lnir Orga</a>
 		    <ul class="nav navbar-nav">
-			  <li class="dropdown">
+			<?php
+					include_once 'databaseConnector.php';
+					
+					$todos = getLists();
+					
+					while($row = mysql_fetch_object($todos)){
+						echo "<li class=\"dropdown\">
+							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">".$row->name."<span class=\"caret\"></span></a>
+							<ul class=\"dropdown-menu\">
+							  <li><a href=\"http://xn--vedrflnir-47a.de/inside?listId=".$row->id."\">List</a></li>
+							  <li role=\"separator\" class=\"divider\"></li>
+							  <li><a href=\"http://xn--vedrflnir-47a.de/inside/page_doneTodos.php?listId=".$row->id."\">Done</a></li>
+							  <li><a href=\"http://xn--vedrflnir-47a.de/inside/page_deletedTodos.php?listId=".$row->id."\">Deleted</a></li>
+							</ul>
+						  </li>";
+					}
+			?>
+			  <!--<li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Todos<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="http://xn--vedrflnir-47a.de/inside/">List</a></li>
@@ -54,7 +71,7 @@
                   <li><a href="#">Done</a></li>
                   <li><a href="#">Deleted</a></li>
                 </ul>
-              </li>
+              </li>-->
           </ul>
         </div>
       </div>

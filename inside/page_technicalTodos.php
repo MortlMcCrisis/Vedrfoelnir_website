@@ -17,7 +17,7 @@
 			</thead>
 			<tbody>
 				<?php
-					include 'databaseConnector.php';
+					require_once 'databaseConnector.php';
 					
 					$todos = getOpenTodos(1);
 					

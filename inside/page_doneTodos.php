@@ -14,7 +14,7 @@
 			</thead>
 			<tbody>
 				<?php
-					include 'databaseConnector.php';
+					require_once 'databaseConnector.php';
 					
 					$deletedTodos = getDoneTodos(0);
 					

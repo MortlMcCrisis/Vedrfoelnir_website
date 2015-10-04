@@ -1,16 +1,16 @@
 <?php
 
-include 'databaseConnector.php';
+require_once 'databaseConnector.php';
 
 if (isset($_GET['id'])){
 	updateTodo($_GET['id'], 'name', $_GET['name']);
 	updateTodo($_GET['id'], 'description', $_GET['description']);
 }
 else{
-	addTodo(0, $_GET['name'], $_GET['description']);
+	addTodo($_GET['listId'], $_GET['name'], $_GET['description']);
 }
 
-goBack();
+//goBack();
 
 function goBack() {
 	$host  = $_SERVER['HTTP_HOST'];

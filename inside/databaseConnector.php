@@ -1,8 +1,26 @@
 <?php
+
+//---------------------LISTS---------------------
+function getListById($listId){
+	$sqlFetch = "SELECT * FROM todo_lists WHERE id=".$listId;
+	return mysql_fetch_object(executeSql($sqlFetch));
+}
+
+function getLists(){
+	$sqlFetch = "SELECT * FROM todo_lists";
+	return executeSql($sqlFetch);
+}
+
+//-----------------END LISTS---------------------
+
+
+//---------------------TODOS---------------------
+
 function addTodo($listId, $name, $description){
 	$newPosition = getLowestTodo()->position+1;
 			
 	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."');";
+	echo $sqlInsert;
 	executeSql($sqlInsert);
 }
 
@@ -46,6 +64,8 @@ function updateTodo($id, $attribute, $value){
 	echo $sqlUpdate;
 	executeSql($sqlUpdate);
 }
+
+//-----------------END TODOS---------------------
 
 function executeSql($sql){
 	

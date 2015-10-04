@@ -1,6 +1,6 @@
 <?php
 
-include 'databaseConnector.php';
+require_once 'databaseConnector.php';
 
 recover($_GET['id']);
 goBack();
