@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<h2>Offene Todos</h2>
+<h2>Offene technische Todos</h2>
 </br></br>
 <a href="/inside/page_newTodo.php" class="btn btn-default">Neues Todo</a>
 </br></br>

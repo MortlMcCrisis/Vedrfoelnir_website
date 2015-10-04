@@ -7,7 +7,7 @@ if (isset($_GET['id'])){
 	updateTodo($_GET['id'], 'description', $_GET['description']);
 }
 else{
-	addTodo($_GET['name'], $_GET['description']);
+	addTodo(0, $_GET['name'], $_GET['description']);
 }
 
 goBack();

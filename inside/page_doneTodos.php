@@ -16,7 +16,7 @@
 				<?php
 					include 'databaseConnector.php';
 					
-					$deletedTodos = getDoneTodos();
+					$deletedTodos = getDoneTodos(0);
 					
 					while($todo = mysql_fetch_object($deletedTodos)){
 						echo "<tr>";

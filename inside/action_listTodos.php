@@ -26,7 +26,7 @@ function up($id) {
 	$lowerTodo = getTodoById($id);
 	
 	if($lowerTodo->position > 1){
-		$upperTodo = getTodoByPosition($lowerTodo->position - 1);
+		$upperTodo = getTodoByPosition(0, $lowerTodo->position - 1);
 		
 		updateTodo($upperTodo->id, "position", $upperTodo->position + 1);
 		updateTodo($lowerTodo->id, "position", $lowerTodo->position - 1);
@@ -35,10 +35,10 @@ function up($id) {
 
 function down($id) {
 	$upperTodo = getTodoById($id);
-	$lowestTodo = getLowestTodo();
+	$lowestTodo = getLowestTodo(0);
 	
 	if($upperTodo->position < $lowestTodo->position){
-		$lowerTodo = getTodoByPosition($upperTodo->position+1);
+		$lowerTodo = getTodoByPosition(0, $upperTodo->position+1);
 		
 		updateTodo($upperTodo->id, "position", $upperTodo->position + 1);
 		updateTodo($lowerTodo->id, "position", $lowerTodo->position - 1);	

@@ -1,8 +1,8 @@
 <?php
-function addTodo($name, $description){
+function addTodo($listId, $name, $description){
 	$newPosition = getLowestTodo()->position+1;
 			
-	$sqlInsert = "INSERT INTO todos (id, position, name, description) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."');";
+	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."');";
 	executeSql($sqlInsert);
 }
 
@@ -11,18 +11,23 @@ function getTodoById($id){
 	return mysql_fetch_object(executeSql($sqlFetch));
 }
 
-function getLowestTodo(){
-	$sqlFetch = 'SELECT * FROM todos ORDER BY position DESC LIMIT 1';
+function getTodoByPosition($listId, $position){
+	$sqlFetch = "SELECT * FROM todos WHERE listId=".$listId." AND position=".$position;
 	return mysql_fetch_object(executeSql($sqlFetch));
 }
 
-function getDoneTodos(){
-	$sqlFetch = 'SELECT * FROM todos WHERE done=1';
+function getLowestTodo($listId){
+	$sqlFetch = 'SELECT * FROM todos WHERE listId='.$listId.' ORDER BY position DESC LIMIT 1';
+	return mysql_fetch_object(executeSql($sqlFetch));
+}
+
+function getDoneTodos($listId){
+	$sqlFetch = 'SELECT * FROM todos WHERE done=1 AND listId='.$listId;
 	return executeSql($sqlFetch);
 }
 
-function getDeletedTodos(){
-	$sqlFetch = 'SELECT * FROM todos WHERE deleted=1';
+function getDeletedTodos($listId){
+	$sqlFetch = 'SELECT * FROM todos WHERE deleted=1 AND listId='.$listId;
 	return executeSql($sqlFetch);
 }
 
@@ -31,8 +36,8 @@ function getOpenTodos($listId){
 	return executeSql($sqlFetch);
 }
 
-function getAllTodosAbovePosition($position){
-	$sqlFetch = 'SELECT * FROM todos WHERE position>'.$position;
+function getAllTodosAbovePosition($listId, $position){
+	$sqlFetch = 'SELECT * FROM todos WHERE listId='.$listId.' position>'.$position;
 	return executeSql($sqlFetch);
 }
 
