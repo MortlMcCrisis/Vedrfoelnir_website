@@ -1,13 +1,13 @@
 <?php include 'header.php'; ?>
 
 <?php
+require_once 'databaseConnector.php';
+
 $idParam = "";
 $name = "";
 $description = "";
 
 if (isset($_GET['id'])) {
-	
-	require_once 'databaseConnector.php';
 	
 	$id = $_GET['id'];
 	

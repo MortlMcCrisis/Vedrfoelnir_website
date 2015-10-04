@@ -15,15 +15,17 @@
 			<tbody>
 				<?php
 					require_once 'databaseConnector.php';
+
+					$listId = $_GET['listId'];					
 					
-					$deletedTodos = getDeletedTodos(0);
+					$deletedTodos = getDeletedTodos($listId);
 					
 					while($todo = mysql_fetch_object($deletedTodos)){
 						echo "<tr>";
 						echo "<td>$todo->name</td>";
 						echo "<td>$todo->description</td>";
 						echo "<td>
-								<button type=\"button\" class=\"btn btn-default btn-xs\" onClick=\"recover($todo->id)\">
+								<button type=\"button\" class=\"btn btn-default btn-xs\" onClick=\"recover($listId, $todo->id)\">
 									recover
 								</button>
 							  </td>";
@@ -36,8 +38,8 @@
 </div>
 
 <script>
-	function recover(id){
-		window.location = 'action_deletedTodos.php?id=' + id;
+	function recover(listId, id){
+		window.location = 'action_deletedTodos.php?listId=' + listId +'&id=' + id;
 	}
 </script>
 

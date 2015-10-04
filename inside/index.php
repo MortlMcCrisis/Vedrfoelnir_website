@@ -39,19 +39,19 @@ $listEntry = getListById($listId);
 						echo "<td>$row->description</td>";
 						echo "<td>
 								<div class=\"btn-group btn-group-xs\" role=\"group\">
-									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction('up', $row->id)\">
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'up')\">
 										<span class=\"glyphicon glyphicon-arrow-up\"></span>
 									</button>
-									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction('down', $row->id)\">
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'down')\">
 										<span class=\"glyphicon glyphicon-arrow-down\"></span>
 									</button>
-									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction('edit', $row->id)\">
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'edit')\">
 										<span class=\"glyphicon glyphicon-pencil\"></span>
 									</button>
-									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction('done', $row->id)\">
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'done')\">
 										<span class=\"glyphicon glyphicon-ok\"></span>
 									</button>
-									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction('delete', $row->id)\">
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'delete')\">
 										<span class=\"glyphicon glyphicon-trash\"></span>
 									</button>
 								</div>
@@ -65,8 +65,8 @@ $listEntry = getListById($listId);
 </div>
 
 <script>
-	function doAction(action, id){
-		window.location = 'action_listTodos.php?action=' + action + '&id=' + id;
+	function doAction(listId, id, action){
+		window.location = 'action_listTodos.php?listId=' + listId + '&id=' + id + '&action=' + action;
 	}
 </script>
 

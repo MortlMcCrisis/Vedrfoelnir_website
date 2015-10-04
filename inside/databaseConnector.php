@@ -17,7 +17,7 @@ function getLists(){
 //---------------------TODOS---------------------
 
 function addTodo($listId, $name, $description){
-	$newPosition = getLowestTodo()->position+1;
+	$newPosition = getLowestTodo($listId)->position+1;
 			
 	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."');";
 	echo $sqlInsert;
@@ -35,7 +35,7 @@ function getTodoByPosition($listId, $position){
 }
 
 function getLowestTodo($listId){
-	$sqlFetch = 'SELECT * FROM todos WHERE listId='.$listId.' ORDER BY position DESC LIMIT 1';
+	$sqlFetch = 'SELECT * FROM todos WHERE listId='.$listId.' ORDER BY position DESC LIMIT 100';
 	return mysql_fetch_object(executeSql($sqlFetch));
 }
 

@@ -1,21 +1,23 @@
 <?php
-
 require_once 'databaseConnector.php';
 
-recover($_GET['id']);
-goBack();
+$id = $_GET['id'];
+$listId = $_GET['listId'];
 
-function recover($id){
+recover($listId, $id);
+goBack($listId);
+
+function recover($listId, $id){
 	updateTodo($id, "done", "0");
 	
-	$lowestTodo = getLowestTodo();
+	$lowestTodo = getLowestTodo($listId);
 	updateTodo($id, "position", $lowestTodo->position+1);
 }
 
-function goBack() {
+function goBack($listId) {
 	$host  = $_SERVER['HTTP_HOST'];
 	$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 	
-	echo '<script type="text/javascript">window.location = "http://'.$host.$uri.'/page_doneTodos.php"</script>';
+	echo '<script type="text/javascript">window.location = "http://'.$host.$uri.'/page_doneTodos.php?listId='.$listId.'"</script>';
 }
 ?>

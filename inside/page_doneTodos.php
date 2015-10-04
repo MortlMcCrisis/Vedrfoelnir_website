@@ -16,14 +16,16 @@
 				<?php
 					require_once 'databaseConnector.php';
 					
-					$deletedTodos = getDoneTodos(0);
+					$listId = $_GET['listId'];
+					
+					$deletedTodos = getDoneTodos($listId);
 					
 					while($todo = mysql_fetch_object($deletedTodos)){
 						echo "<tr>";
 						echo "<td>$todo->name</td>";
 						echo "<td>$todo->description</td>";
 						echo "<td>
-								<button type=\"button\" class=\"btn btn-default btn-xs\" onClick=\"undo($todo->id)\">
+								<button type=\"button\" class=\"btn btn-default btn-xs\" onClick=\"undo($listId, $todo->id)\">
 									undo
 								</button>
 							  </td>";
@@ -36,8 +38,8 @@
 </div>
 
 <script>
-	function undo(id){
-		window.location = 'action_undoTodos.php?id=' + id;
+	function undo(listId, id){
+		window.location = 'action_undoTodos.php?listId=' + listId +'&id=' + id;
 	}
 </script>
 
