@@ -23,6 +23,7 @@
 			<li id="menuItem3"><a href="band.php">Band</a></li>
 			<li id="menuItem4"><a href="live.php">Live</a></li>
 			<li id="menuItem5"><a href="contact.php">Contact &amp; Booking</a></li>
+			<li id="menuItem6"><a href="press.php">Press</a></li>
 		</ul>
 	</div>
 </div>

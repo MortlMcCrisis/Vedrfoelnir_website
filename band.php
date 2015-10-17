@@ -31,9 +31,9 @@
 				<?php require('pageHeader.php'); ?>
 				<div id="content">
 					<div id="left">
-						<h2>Die Band</h2>
+						<h2>Band</h2>
 						<h3>Mitglieder</h3>
-						<img src="images/band.png" id="bandPic"/>
+						<img src="images/band.png" class="fullSizePic"/>
 						<p style="text-align:center;">
 							Michael Stockmar - Vocals<br>
 							Roland Kessler - Lead Gitarre<br>

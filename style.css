@@ -21,6 +21,11 @@ h2 {
 	margin-bottom: 20px;
 }
 
+h3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 a {
 	color: #424242;
 	font-size: 14px;
@@ -104,23 +109,27 @@ td {
 }
 
 #menuItem1 {
-	left: 60px;
+	left: 54px;
 }
 
 #menuItem2 {
-	left: 185px;
+	left: 153px;
 }
 
 #menuItem3 {
-	left: 330px;
+	left: 266px;
 }
 
 #menuItem4 {
-	left: 455px;
+	left: 369px;
 }
 
 #menuItem5 {
-	left: 565px;
+	left: 455px;
+}
+
+#menuItem6 {
+	left: 747px;
 }
 
 #menu a {
@@ -152,11 +161,6 @@ td {
 #impressum{
 	width: 753px;
 	margin-right: 60px;
-}
-
-#bandPic{
-	padding-top: 30px;
-	width:100%;
 }
 
 #right {
@@ -231,14 +235,28 @@ td {
 	font-size: 14px;
 }
 
+.fullSizePic{
+	width:100%;
+}
+
+.centeredPic{
+	display: block;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .concert {
 	margin-top: 20px;
 }
 
-.gig {
+.comment, .gig {
 	font-style: italic;
-	padding-top: 20px;
 	font-size: 13px;
+}
+
+.gig {
+	padding-top: 20px;
 }
 
 .right {

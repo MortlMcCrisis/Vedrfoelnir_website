@@ -40,9 +40,9 @@
 			<?php
 					include_once 'databaseConnector.php';
 					
-					$todos = getLists();
+					$lists = getLists();
 					
-					while($row = mysql_fetch_object($todos)){
+					while($row = mysql_fetch_object($lists)){
 						echo "<li class=\"dropdown\">
 							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">".$row->name."<span class=\"caret\"></span></a>
 							<ul class=\"dropdown-menu\">
@@ -54,24 +54,10 @@
 						  </li>";
 					}
 			?>
-			  <!--<li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Todos<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="http://xn--vedrflnir-47a.de/inside/">List</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="http://xn--vedrflnir-47a.de/inside/page_doneTodos.php">Done</a></li>
-                  <li><a href="http://xn--vedrflnir-47a.de/inside/page_deletedTodos.php">Deleted</a></li>
-                </ul>
-			  </li>
-			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">technische Todos<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-                  <li><a href="http://xn--vedrflnir-47a.de/inside/page_technicalTodos.php">List</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Done</a></li>
-                  <li><a href="#">Deleted</a></li>
-                </ul>
-              </li>-->
+			<li><a href="http://xn--vedrflnir-47a.de/inside/page_orgaDocuments.php">Orga Dokumente</a></li>
+			<li><a href="http://xn--vedrflnir-47a.de/inside/page_locations.php">Locations</a></li>
+			<li><a href="http://xn--vedrflnir-47a.de/inside/page_otherBands.php">Andere Bands</a></li>
+			<li><a href="http://xn--vedrflnir-47a.de/inside/database.log">Datenbank Log</a></li>
           </ul>
         </div>
       </div>

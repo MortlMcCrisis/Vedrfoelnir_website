@@ -1,5 +1,4 @@
 <?php
-
 //---------------------LISTS---------------------
 function getListById($listId){
 	$sqlFetch = "SELECT * FROM todo_lists WHERE id=".$listId;
@@ -20,8 +19,12 @@ function addTodo($listId, $name, $description){
 	$newPosition = getLowestTodo($listId)->position+1;
 			
 	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."');";
-	echo $sqlInsert;
 	executeSql($sqlInsert);
+	
+	include_once('log4php/Logger.php');
+	Logger::configure('config.xml');
+	$logger = Logger::getLogger("main");
+	$logger->info("Added todo: (listId='".$listId."' name='".$name."' description=".$description.")");
 }
 
 function getTodoById($id){
@@ -60,6 +63,13 @@ function getAllTodosAbovePosition($listId, $position){
 }
 
 function updateTodo($id, $attribute, $value){
+	$todo = getTodoById($id);
+	
+	include_once('log4php/Logger.php');
+	Logger::configure('config.xml');
+	$logger = Logger::getLogger("main");
+	$logger->info("Updated todo: (id='".$todo->id."' listId='".$todo->listId."' name='".$todo->name."' description='".$todo->description."') -> (".$attribute."='".$value."')");
+	
 	$sqlUpdate = "UPDATE todos SET ".$attribute."='".$value."' WHERE id=".$id;
 	echo $sqlUpdate;
 	executeSql($sqlUpdate);
