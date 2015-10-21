@@ -42,9 +42,9 @@
                     </tr>
                     <tr>
                         <td>Michael Stockmar</td>
-                        <td></td>
+                        <td>07681 9059707</td>
                         <td>lopip@gmx.de, michael@vedrfoelnir.de</td>
-                        <td></td>
+                        <td>Hauptstraße 44a, 79183 Waldkirch</td>
                     </tr>
                     <tr>
                         <td>Johannes Eppler</td>
@@ -54,7 +54,7 @@
                     </tr>
                     <tr>
                         <td>Michael Ohnemus</td>
-                        <td></td>
+                        <td>0170 8484204</td>
                         <td>mohnemus@gmx.de</td>
                         <td></td>
                     </tr>
