@@ -9,7 +9,17 @@
         </div>
         <div class="panel-body">
             <div class="col-md-12">
-                <a href="#">Stage Rider</a><br>
+                <a href="#">Stage Rider</a>
+            </div>
+        </div>
+    </div>
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            Unsere Konditionen
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                Spritgeld (je nach Entfernung), Catering, Freigetränke
             </div>
         </div>
     </div>
