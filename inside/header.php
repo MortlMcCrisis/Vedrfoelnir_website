@@ -36,6 +36,8 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Vedrf&ouml;lnir Orga</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
 		    <ul class="nav navbar-nav">
 			<?php
 					include_once 'databaseConnector.php';
@@ -58,7 +60,7 @@
 			<li><a href="http://xn--vedrflnir-47a.de/inside/page_locations.php">Locations</a></li>
 			<li><a href="http://xn--vedrflnir-47a.de/inside/page_otherBands.php">Andere Bands</a></li>
 			<li><a href="http://xn--vedrflnir-47a.de/inside/database.log">Datenbank Log</a></li>
-          </ul>
+                </ul>
         </div>
       </div>
     </nav>
