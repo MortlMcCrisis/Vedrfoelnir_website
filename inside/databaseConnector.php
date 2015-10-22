@@ -58,7 +58,7 @@ function getOpenTodos($listId){
 }
 
 function getAllTodosAbovePosition($listId, $position){
-	$sqlFetch = 'SELECT * FROM todos WHERE listId='.$listId.' position>'.$position;
+	$sqlFetch = 'SELECT * FROM todos WHERE listId='.$listId.' AND position>'.$position;
 	return executeSql($sqlFetch);
 }
 
