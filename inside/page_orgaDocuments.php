@@ -66,7 +66,7 @@
                         <td>Michael Ohnemus</td>
                         <td>0170 8484204</td>
                         <td>mohnemus@gmx.de</td>
-                        <td></td>
+                        <td>Thomas-Mann-Str. 7,  Denzlingen</td>
                     </tr>
                     <tr>
                         <td>André Steinbrenner</td>
