@@ -1,4 +1,32 @@
 <?php
+//---------------------LOCATIONS---------------------
+function addLocation($name, $city, $contact, $comment){
+    $sqlInsert = "INSERT INTO locations (id, name,city, contact, comment) VALUES (NULL, '".$name."', '".$city."', '".$contact."', '".$comment."');";
+    executeSql($sqlInsert);
+    
+    logMessage("Added location: (name='".$name."' city='".$city."' contact=".$contact.")");
+}
+
+function getLocationById($id){
+    $sqlFetch = 'SELECT * FROM locations WHERE id='.$id;
+    return mysql_fetch_object(executeSql($sqlFetch));
+}
+
+function getLocations(){
+    $sqlFetch = 'SELECT * FROM locations WHERE deleted=0';
+    return executeSql($sqlFetch);
+}
+
+function updateLocation($id, $attribute, $value){
+
+    $sqlUpdate = "UPDATE locations SET ".$attribute."='".$value."' WHERE id=".$id;
+    executeSql($sqlUpdate);
+    
+    logMessage("Updated location: (id='".$id."' attribute='".$attribute."' value=".$value.")");
+}
+//-----------------END LOCATIONS---------------------
+
+
 //---------------------LISTS---------------------
 function getListById($listId){
 	$sqlFetch = "SELECT * FROM todo_lists WHERE id=".$listId;
@@ -9,22 +37,17 @@ function getLists(){
 	$sqlFetch = "SELECT * FROM todo_lists";
 	return executeSql($sqlFetch);
 }
-
 //-----------------END LISTS---------------------
 
 
 //---------------------TODOS---------------------
-
 function addTodo($listId, $name, $description){
 	$newPosition = getLowestTodo($listId)->position+1;
 			
 	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."');";
 	executeSql($sqlInsert);
 	
-	include_once('log4php/Logger.php');
-	Logger::configure('config.xml');
-	$logger = Logger::getLogger("main");
-	$logger->info("Added todo: (listId='".$listId."' name='".$name."' description=".$description.")");
+	logMessage("Added todo: (listId='".$listId."' name='".$name."' description=".$description.")");
 }
 
 function getTodoById($id){
@@ -65,16 +88,12 @@ function getAllTodosAbovePosition($listId, $position){
 function updateTodo($id, $attribute, $value){
 	$todo = getTodoById($id);
 	
-	include_once('log4php/Logger.php');
-	Logger::configure('config.xml');
-	$logger = Logger::getLogger("main");
-	$logger->info("Updated todo: (id='".$todo->id."' listId='".$todo->listId."' name='".$todo->name."' description='".$todo->description."') -> (".$attribute."='".$value."')");
+	logMessage("Updated todo: (id='".$todo->id."' listId='".$todo->listId."' name='".$todo->name."' description='".$todo->description."') -> (".$attribute."='".$value."')");
 	
 	$sqlUpdate = "UPDATE todos SET ".$attribute."='".$value."' WHERE id=".$id;
 	echo $sqlUpdate;
 	executeSql($sqlUpdate);
 }
-
 //-----------------END TODOS---------------------
 
 function executeSql($sql){
@@ -93,5 +112,13 @@ function executeSql($sql){
 	else {
 		echo 'Could not connect to database server.';
 	}
+}
+
+//should be a member variable anyway
+function logMessage($message){
+        include_once('log4php/Logger.php');
+	Logger::configure('config.xml');
+	$logger = Logger::getLogger("main");
+	$logger->info($message);
 }
 ?>
