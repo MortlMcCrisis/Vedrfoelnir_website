@@ -1,4 +1,41 @@
 <?php
+function getContactById($id){
+    $sqlFetch = 'SELECT * FROM contacts WHERE id='.$id;
+    return mysql_fetch_object(executeSql($sqlFetch));
+}
+
+function getContacts($listId){
+    $sqlFetch = 'SELECT * FROM contacts WHERE deleted=0 AND list='.$listId;
+    return executeSql($sqlFetch);
+}
+
+function addContact($listId, $name, $city, $contact, $comment){
+    $sqlInsert = "INSERT INTO contacts (id, name, city, contact, comment, list) VALUES (NULL, '".$name."', '".$city."', '".$contact."', '".$comment."', '".$listId."');";
+    executeSql($sqlInsert);
+
+    logMessage("Added contact: (name='".$name."' city='".$city."' contact='".$contact."' comment='".$comment."')");
+}
+
+function updateContact($id, $attribute, $value){
+
+    $sqlUpdate = "UPDATE contacts SET ".$attribute."='".$value."' WHERE id=".$id;
+    executeSql($sqlUpdate);
+    
+    logMessage("Updated contact: (id='".$id."' attribute='".$attribute."' value=".$value.")");
+}
+
+//---------------------CONTACT LISTS---------------------
+function getContactListById($listId){
+	$sqlFetch = "SELECT * FROM contact_lists WHERE id=".$listId;
+	return mysql_fetch_object(executeSql($sqlFetch));
+}
+
+function getContactLists(){
+	$sqlFetch = "SELECT * FROM contact_lists";
+	return executeSql($sqlFetch);
+}
+//-----------------END CONTACT LISTS---------------------
+
 //---------------------LOCATIONS---------------------
 function addLocation($name, $city, $contact, $comment){
     $sqlInsert = "INSERT INTO locations (id, name,city, contact, comment) VALUES (NULL, '".$name."', '".$city."', '".$contact."', '".$comment."');";
@@ -7,13 +44,19 @@ function addLocation($name, $city, $contact, $comment){
     logMessage("Added location: (name='".$name."' city='".$city."' contact=".$contact.")");
 }
 
+function getContactCount($listId){
+	$sqlFetch = "SELECT COUNT(id) FROM contacts WHERE listId=".$listId;
+	return executeSql($sqlFetch);
+}
+
 function getLocationById($id){
     $sqlFetch = 'SELECT * FROM locations WHERE id='.$id;
     return mysql_fetch_object(executeSql($sqlFetch));
 }
 
 function getLocations(){
-    $sqlFetch = 'SELECT * FROM locations WHERE deleted=0';
+// delete workaround "AND LIST=1"
+    $sqlFetch = 'SELECT * FROM locations WHERE deleted=0 AND list=1';
     return executeSql($sqlFetch);
 }
 
@@ -48,6 +91,12 @@ function addTodo($listId, $name, $description){
 	executeSql($sqlInsert);
 	
 	logMessage("Added todo: (listId='".$listId."' name='".$name."' description=".$description.")");
+}
+
+function getTodoCount($listId){
+	$sqlFetch = "SELECT COUNT(id) FROM todos WHERE deleted=0 AND done=0 AND listId=".$listId;
+	$menge = mysql_fetch_row(executeSql($sqlFetch));
+	return $menge[0];
 }
 
 function getTodoById($id){

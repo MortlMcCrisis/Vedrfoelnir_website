@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-        <div class="panel panel-default">
+    <div class="panel panel-default">
         <div class="panel-heading">
             Unsere Konditionen
         </div>
@@ -76,6 +76,18 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Git Repositorys
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                Hier ist der Quellcode der Website gehostet: <a href="https://github.com/MortlMcCrisis/verdrfoelnir_website.git">https://github.com/MortlMcCrisis/verdrfoelnir_website.git</a><br>
+                Hier ist der Quellcode vom Inside-Bereich gehostet: <a href="https://github.com/MortlMcCrisis/verdrfoelnir_website.git">https://github.com/MortlMcCrisis/verdrfoelnir_website.git</a><br>
+                Ganz wichtig: auf den Produktivseite sind die Datenbankverbindungen konfiguriert. Diese dürfen NICHT lokal gesetzt und committed werden.
+            </div>
         </div>
     </div>
 </div>
