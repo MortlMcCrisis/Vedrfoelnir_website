@@ -9,7 +9,17 @@ if (isset($_GET['listId'])){
 }
 
 $listEntry = getListById($listId);
+
+$todoCount = getTodoCount($listId);
+$doneTodoCount = getDoneTodoCount($listId);
+$percent = ($doneTodoCount / ($doneTodoCount + $todoCount)) * 100;
 ?>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo $percent; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent; ?>%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
 
 <h2><?php echo $listEntry->name; ?></h2>
 </br></br> 

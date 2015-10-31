@@ -46,9 +46,9 @@
                     </tr>
                     <tr>
                         <td>Roland Kessler</td>
-                        <td>0760 38419027</td>
-                        <td>roland_kessler@gmx.de</td>
-                        <td></td>
+                        <td>0761 38419027, 0152 33841229</td>
+                        <td>roland_kessler@gmx.net</td>
+                        <td>Schenkstraße 5, 79106 Freiburg</td>
                     </tr>
                     <tr>
                         <td>Michael Stockmar</td>
@@ -60,7 +60,7 @@
                         <td>Johannes Eppler</td>
                         <td>0160 2545986</td>
                         <td>johannes.eppler@gmx.de</td>
-                        <td></td>
+                        <td>Rathausstraße 9, 79206</td>
                     </tr>
                     <tr>
                         <td>Michael Ohnemus</td>
@@ -72,22 +72,10 @@
                         <td>André Steinbrenner</td>
                         <td>0176 31284351</td>
                         <td>ljgkaefer@gmail.de</td>
-                        <td></td>
+                        <td>Runzstraße 48</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            Git Repositorys
-        </div>
-        <div class="panel-body">
-            <div class="col-md-12">
-                Hier ist der Quellcode der Website gehostet: <a href="https://github.com/MortlMcCrisis/verdrfoelnir_website.git">https://github.com/MortlMcCrisis/verdrfoelnir_website.git</a><br>
-                Hier ist der Quellcode vom Inside-Bereich gehostet: <a href="https://github.com/MortlMcCrisis/verdrfoelnir_website.git">https://github.com/MortlMcCrisis/verdrfoelnir_website.git</a><br>
-                Ganz wichtig: auf den Produktivseite sind die Datenbankverbindungen konfiguriert. Diese dürfen NICHT lokal gesetzt und committed werden.
-            </div>
         </div>
     </div>
 </div>

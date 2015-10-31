@@ -12,3 +12,78 @@
 2015-10-05T22:09:23+02:00 [main] Updated todo: (id='101' listId='2' name='asd' description='as fasf  asfas fasfasd') -> (position='19')
 2015-10-05T22:09:27+02:00 [main] Updated todo: (id='101' listId='2' name='asd' description='as fasf  asfas fasfasd') -> (deleted='1')
 2015-10-05T22:09:27+02:00 [main] Updated todo: (id='101' listId='2' name='asd' description='as fasf  asfas fasfasd') -> (position='-1')
+2015-10-26T22:36:37+01:00 [main] Added location: (name='aaa' city='aa' contact=aa)
+2015-10-26T22:39:04+01:00 [main] Added contact: (name='asd' city='asd' contact='asd' comment='asd')
+2015-10-26T22:39:50+01:00 [main] Added contact: (name='yxc' city='yxc' contact='yxc' comment='yxc')
+2015-10-26T22:42:47+01:00 [main] Added contact: (name='ggggg' city='gg' contact='gg' comment='gg')
+2015-10-26T22:42:56+01:00 [main] Added contact: (name='dddddddd' city='ddd' contact='dddd' comment='ddd')
+2015-10-26T22:46:50+01:00 [main] Updated contact: (id='26' attribute='name' value=ggggg)
+2015-10-26T22:46:50+01:00 [main] Updated contact: (id='26' attribute='city' value=gg)
+2015-10-26T22:46:50+01:00 [main] Updated contact: (id='26' attribute='contact' value=ggdyxgsdfghdfgh)
+2015-10-26T22:46:50+01:00 [main] Updated contact: (id='26' attribute='comment' value=gg)
+2015-10-26T22:46:57+01:00 [main] Updated contact: (id='2' attribute='deleted' value=1)
+2015-10-26T22:48:54+01:00 [main] Updated contact: (id='26' attribute='deleted' value=1)
+2015-10-26T22:49:48+01:00 [main] Added contact: (name='ted' city='ted' contact='ted' comment='td')
+2015-10-26T22:49:50+01:00 [main] Updated contact: (id='28' attribute='deleted' value=1)
+2015-10-26T22:50:10+01:00 [main] Added contact: (name='dascha' city='dascha' contact='dascha' comment='dascha')
+2015-10-26T22:50:16+01:00 [main] Updated contact: (id='29' attribute='name' value=daschadascha)
+2015-10-26T22:50:16+01:00 [main] Updated contact: (id='29' attribute='city' value=daschadascha)
+2015-10-26T22:50:16+01:00 [main] Updated contact: (id='29' attribute='contact' value=daschadascha)
+2015-10-26T22:50:16+01:00 [main] Updated contact: (id='29' attribute='comment' value=daschadascha)
+2015-10-26T22:50:18+01:00 [main] Updated contact: (id='29' attribute='deleted' value=1)
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='30' listId='2' name='Liste von Bands im inside Bereich' description='') -> (done='1')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='30' listId='2' name='Liste von Bands im inside Bereich' description='') -> (position='-1')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='31' listId='2' name='Blog auf die Seite bauen' description='') -> (position='7')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='56' listId='2' name='Webseite schneller und Mobile Fähig machen' description='') -> (position='3')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='58' listId='2' name='Beschreibung verkürzen' description='Die Beschreibung macht die Liste unhandlich und unleserlich. Entweder sollte die Anzahl der Zeichen von der Beschreibung in der Liste begrenzt werden (mit ... abgeschnitten) oder komplett entfernt werden.') -> (position='9')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='61' listId='2' name='Hintergrundbild von der Webseite austauschen' description='Da sollte eigentlich schon lange das Bild ohne Logo hin') -> (position='1')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='62' listId='2' name='Funktion im Insidebereich um einen Newsartikel einzutragen' description='Es sollte automatischa auch das rss.xml geupdated werden. Außerdem vll Todos erzeugt, die daran erinnern die Berichte auch bei Facebook und Twitter einzutragen,
+Außerdem soll der Eintrag nachträglich bearbeitet werden können') -> (position='10')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='64' listId='2' name='Tabelle mit HTML 5 data table erweitern' description='https://datatables.net/examples/advanced_init/html5-data-attributes.html') -> (position='11')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='65' listId='2' name='Newsletter bestell Seite schön machen' description='Im Seiten Design') -> (position='12')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='89' listId='2' name='Button implementieren um neue liste anzulegen' description='') -> (position='13')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='93' listId='2' name='Prozentanzeige für Listen implementieren' description='Es soll zwei listentypen geben: einmal listen mit Fortschritt und leiste und einmal statische listen ohne Fortschritt. Zusätzlich könnte noch ein zeit/Fortschritts Diagramm angezeigt werden ( Java script)') -> (position='14')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='96' listId='2' name='databaseConnector auseinander ziehen' description='Trennen nach Dao Klassen. Vorerst List/Todo/Locations und database als abstrakte Klasse.') -> (position='16')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='99' listId='2' name='Klassen einführen' description='- goToPage Methode sollte statisch/global sein / von überall erreichbar (action_listLocations.php, action_listTodos.php)
+- logger sollte eine member variable sein (databaseConnector.php)') -> (position='15')
+2015-10-26T23:01:31+01:00 [main] Updated todo: (id='104' listId='2' name='Presseinhalte und EPK ins englische übersetzen' description='') -> (position='8')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='105' listId='2' name='Lieder auf die Presseseite stellen' description='') -> (position='6')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='106' listId='2' name='Banner erstellen und auf die Presseseite stellen' description='Hier erstellen: http://www.flashvortex.com/banners.php
+Davon diese beiden: 
+- http://www.flashvortex.com/Basic-Image-Leaderboard-Generator
+- http://www.flashvortex.com/Image-Fade-Rectangle-Generator') -> (position='5')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='107' listId='2' name='CSS aufräumen' description='Momentan sind die CSS Befehle vergewaltigt. Klassen sind Ids, inline und file css sind gemischt. Das muss aufgeräumt werden und in die style.css.') -> (position='2')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='108' listId='2' name='Alle EPK Inhalte als separater Download' description='ganz oben sollte das EPK hin (mit Schrift: "als zip") und darunter die einzelnen contents nach Wichtigkeit sortiert. Es sollte noch überlegt werden, was da wirklich hin soll und was nicht.') -> (position='4')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='115' listId='2' name='Startpage erstellen' description='mit Erklärungen wie und was diese Seite funktioniert. Eventuell parallel Erklärungen und Blogartig die neusten Features berichten.
+- Dann sollte auch der Workaround weg, dass bei den liste-Abfragen zuerst fix die 1 gesetzt wird') -> (position='17')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='116' listId='2' name='Per Badge die Anzahl offener Todos / Kontakte anzeigen' description='Zuerst überlegen was und wo:
+- Nur die Anzahl offener Todos/Kontakte oder alle?
+- Im Hauptbutton oder direkt unten bei "List".
+- Je nach implementierung der Kontakte ist da eine andere Anforderung.') -> (position='18')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='117' listId='2' name='Eigene Repos für Webpage- und Inside- Bereich erstellen' description='Beschreibung in der orga Seite anpassen ') -> (position='19')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='118' listId='2' name='Roland in die Entwicklung einführen' description='Davor muss noch geschaut werden wie es mit Rechten auf Github aussieht, und ein Workflow definiert werden (am besten Ticketbranches oder so)') -> (position='20')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='119' listId='2' name='Tickets sollen zwischen den Listen verschoben werden können' description='') -> (position='21')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='120' listId='2' name='Tickets per Drag and Drop verschieben' description='Dazu ist eine JavaScript Bibliothek notwendig.') -> (position='22')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='121' listId='2' name='Build Pipeline mit Funktionstests erstellen' description='Folgende Schritte sollten automatisiert werden:
+- Nach einem Commit werden automatische Tests ausgeführt.
+- w3c Konformität prüfen
+- strikt xhtml prüfen
+- Sind diese erfolgreich wird der Branch auf master gemerged.
+- Die Änderungen werden deployed.') -> (position='23')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='122' listId='2' name='Zeichensatzkodierungs-Problematik lösen' description='Es sollen überall Problemlos Sonderzeichen und Umlaute angezeigt werden.') -> (position='24')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='124' listId='2' name='Nicht "new"Todo/Location' description='Der Name ist irreführend, da auf der Seite auch ein Datum bearbeitet werden kann 
+- besseren Namen finden und seiten anpassen
+- heading auf den seiten entsprechend anpassen') -> (position='25')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='125' listId='2' name='Success/Failure Message beim hinzufügen/ändern/löschen' description='') -> (position='26')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='126' listId='2' name='bei den listen tabellen die namen als primary key' description='') -> (position='27')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='127' listId='2' name='Git repositorys auf die Orga Page' description='vorher müssen die Github-Rechte geklärt sein.') -> (position='28')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='129' listId='2' name='User implementieren' description='Erreichbare / ungeschützte Seite die htaccess Parameter und User als Parameter mitschickt') -> (position='29')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='130' listId='2' name='Tabellen zusammenlegen' description='- Todos und Kontake werden listItems
+- contact_list und todo_list werden list
+- Konstanten festlegen, die den Typ eines listItems definieren (todo, contact)
+- neues Attribut von Todo/Contact: Typ') -> (position='30')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='131' listId='2' name='Übersicht mit Fortschritten der Todo-Listen' description='Eventuell als auf der linken Seite in einem Seitenmenu') -> (position='31')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='132' listId='2' name='Diagramm mit zeitlichem Verlauf' description='- Es soll angezeigt werdenwie viele Tickets noch offen / abgeschlossen / gelöscht sind.
+- Wahrscheinlich am besten mit JavaScript Bibliothek umgesetzt.') -> (position='32')
+2015-10-26T23:01:32+01:00 [main] Updated todo: (id='134' listId='2' name='Neue Todos auf der Startseite anzeigen' description='Es sollen alle Todos angezeigt werden, die seit dem letzten Login angelegt wurden.') -> (position='33')
+2015-10-26T23:02:45+01:00 [main] Added todo: (listId='2' name='Beschreibung für Todo/Contact' description=Es soll ein neues Feld geben, mit dem oben auf der entsprechenden Seite eine Beschreibung angezeigt werden kann.)

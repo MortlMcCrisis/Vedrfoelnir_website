@@ -4,6 +4,7 @@ require_once 'databaseConnector.php';
 $listId = $_GET['listId'];
 
 if (isset($_GET['id'])){
+        updateTodo($_GET['id'], 'listId', $_GET['listId']);
 	updateTodo($_GET['id'], 'name', $_GET['name']);
 	updateTodo($_GET['id'], 'description', $_GET['description']);
 }

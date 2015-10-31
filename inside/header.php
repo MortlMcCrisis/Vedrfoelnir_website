@@ -66,7 +66,14 @@
 					}
 			?>
 			<li><a href="http://xn--vedrflnir-47a.de/inside/page_orgaDocuments.php">Orga Dokumente</a></li>
-			<li><a href="http://xn--vedrflnir-47a.de/inside/database.log">Datenbank Log</a></li>
+			<li><p class="navbar-btn"><a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a></p></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://xn--vedrflnir-47a.de/inside/database.log">Datenbank Log</a></li>
+                                <li><a href="http://xn--vedrflnir-47a.de/inside/page_technicalDocumentation.php">technische Dokumentation</a></li>
+                            </ul>
+                        </li>";
                 </ul>
         </div>
       </div>

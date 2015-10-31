@@ -36,41 +36,15 @@ function getContactLists(){
 }
 //-----------------END CONTACT LISTS---------------------
 
-//---------------------LOCATIONS---------------------
-function addLocation($name, $city, $contact, $comment){
-    $sqlInsert = "INSERT INTO locations (id, name,city, contact, comment) VALUES (NULL, '".$name."', '".$city."', '".$contact."', '".$comment."');";
-    executeSql($sqlInsert);
-    
-    logMessage("Added location: (name='".$name."' city='".$city."' contact=".$contact.")");
-}
-
-function getContactCount($listId){
-	$sqlFetch = "SELECT COUNT(id) FROM contacts WHERE listId=".$listId;
-	return executeSql($sqlFetch);
-}
-
-function getLocationById($id){
-    $sqlFetch = 'SELECT * FROM locations WHERE id='.$id;
-    return mysql_fetch_object(executeSql($sqlFetch));
-}
-
-function getLocations(){
-// delete workaround "AND LIST=1"
-    $sqlFetch = 'SELECT * FROM locations WHERE deleted=0 AND list=1';
-    return executeSql($sqlFetch);
-}
-
-function updateLocation($id, $attribute, $value){
-
-    $sqlUpdate = "UPDATE locations SET ".$attribute."='".$value."' WHERE id=".$id;
-    executeSql($sqlUpdate);
-    
-    logMessage("Updated location: (id='".$id."' attribute='".$attribute."' value=".$value.")");
-}
-//-----------------END LOCATIONS---------------------
-
 
 //---------------------LISTS---------------------
+function addList($name){
+	$sqlInsert = "INSERT INTO todo_lists (id, name) VALUES (NULL, '".$name."');";
+	executeSql($sqlInsert);
+	
+	logMessage("Added list: (name='".$name."')");
+}
+
 function getListById($listId){
 	$sqlFetch = "SELECT * FROM todo_lists WHERE id=".$listId;
 	return mysql_fetch_object(executeSql($sqlFetch));
@@ -98,6 +72,13 @@ function getTodoCount($listId){
 	$menge = mysql_fetch_row(executeSql($sqlFetch));
 	return $menge[0];
 }
+
+function getDoneTodoCount($listId){
+	$sqlFetch = "SELECT COUNT(id) FROM todos WHERE done=1 AND listId=".$listId;
+	$menge = mysql_fetch_row(executeSql($sqlFetch));
+	return $menge[0];
+}
+
 
 function getTodoById($id){
 	$sqlFetch = "SELECT * FROM todos WHERE id=".$id;
