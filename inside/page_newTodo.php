@@ -19,14 +19,29 @@ if (isset($_GET['id'])) {
 	$name = $todo->name;
 	$description = $todo->description;
 }
+
+$lists = getLists();
 ?>
 <h2>Neues Todo</h2>
 </br></br>
 <div class="row">
 	<div class="col-md-12">
 		<form role="form" action="action_newTodo.php">
-                        <input type="hidden" name="listId" value="<?php echo $listId; ?>">
 			<?php echo $idParam; ?>
+                        <div class="form-group">
+                        <label for="listId">Liste:</label>
+                            <select class="form-control" name="listId" id="listId">
+                            <?php
+                            while($row = mysql_fetch_object($lists)){
+                                $selected = "";
+                                if($row->id==$listId){
+                                    $selected = " selected";
+                                }
+                                echo "<option value=\"".$row->id."\"".$selected.">".$row->name."</option>";
+                            }
+                            ?>
+                            </select>
+                        </div>
 			<div class="form-group">
 				<label for="name">Name:</label>
 				<input type="text" class="form-control" id="name" name="name" value="<?php echo $name; ?>"></input>

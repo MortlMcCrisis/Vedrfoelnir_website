@@ -1,12 +1,25 @@
 <?php
 require_once 'databaseConnector.php';
 
+$id = $_GET['id'];
 $listId = $_GET['listId'];
 
 if (isset($_GET['id'])){
-        updateTodo($_GET['id'], 'listId', $_GET['listId']);
-	updateTodo($_GET['id'], 'name', $_GET['name']);
-	updateTodo($_GET['id'], 'description', $_GET['description']);
+        $oldTodo = getTodoById($id);
+        $lowestTodo = getLowestTodo($listId);
+
+        updateTodo($id, 'listId', $_GET['listId']);
+	updateTodo($id, 'name', $_GET['name']);
+	updateTodo($id, 'description', $_GET['description']);
+        updateTodo($id, 'position', ($lowestTodo->position + 1));
+	
+	echo $oldTodo->listId." ".$oldTodo->position." ";
+	
+	$todos = getAllTodosAbovePosition($oldTodo->listId, $oldTodo->position);
+        while($row = mysql_fetch_object($todos)){
+            echo $row->position;
+            updateTodo($row->id, 'position', ($row->position - 1));
+        }
 }
 else{
 	addTodo($listId, $_GET['name'], $_GET['description']);
