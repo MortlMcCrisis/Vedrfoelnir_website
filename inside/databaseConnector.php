@@ -38,11 +38,11 @@ function getContactLists(){
 
 
 //---------------------LISTS---------------------
-function addList($name){
-	$sqlInsert = "INSERT INTO todo_lists (id, name) VALUES (NULL, '".$name."');";
+function addList($name, $description){
+	$sqlInsert = "INSERT INTO todo_lists (id, name, description) VALUES (NULL, '".$name."', '".$description."');";
 	executeSql($sqlInsert);
 	
-	logMessage("Added list: (name='".$name."')");
+	logMessage("Added list: (name='".$name."', description='".$description."')");
 }
 
 function getListById($listId){

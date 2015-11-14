@@ -39,31 +39,15 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 		    <ul class="nav navbar-nav">
+                        <li><a href="http://xn--vedrflnir-47a.de/inside?listId=1">Todos</a></li>
 			<?php
-					include_once 'databaseConnector.php';
-					
-					$lists = getLists();
-					
-					while($row = mysql_fetch_object($lists)){
-						echo "<li class=\"dropdown\">
-							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">".$row->name." <span class=\"badge\">".getTodoCount($row->id)."</span> <span class=\"caret\"></span></a>
-							<ul class=\"dropdown-menu\">
-							  <li><a href=\"http://xn--vedrflnir-47a.de/inside?listId=".$row->id."\">List</a></li>
-							  <li role=\"separator\" class=\"divider\"></li>
-							  <li><a href=\"http://xn--vedrflnir-47a.de/inside/page_doneTodos.php?listId=".$row->id."\">Done</a></li>
-							  <li><a href=\"http://xn--vedrflnir-47a.de/inside/page_deletedTodos.php?listId=".$row->id."\">Deleted</a></li>
-							</ul>
-						  </li>";
-					}
-			?>
-			<?php
-					include_once 'databaseConnector.php';
-					
-					$contactLists = getContactLists();
-					
-					while($row = mysql_fetch_object($contactLists)){
-						echo "<li><a href=\"http://xn--vedrflnir-47a.de/inside/page_contacts.php?listId=".$row->id."\">".$row->name."</a></li>";
-					}
+				include_once 'databaseConnector.php';
+				
+				$contactLists = getContactLists();
+				
+				while($row = mysql_fetch_object($contactLists)){
+					echo "<li><a href=\"http://xn--vedrflnir-47a.de/inside/page_contacts.php?listId=".$row->id."\">".$row->name."</a></li>";
+				}
 			?>
 			<li><a href="http://xn--vedrflnir-47a.de/inside/page_orgaDocuments.php">Orga Dokumente</a></li>
 			<li><p class="navbar-btn"><a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a></p></li>

@@ -25,7 +25,7 @@
                 <ul>
                     <li>Bootstrap: <a href="http://getbootstrap.com/">http://getbootstrap.com/</a> (HTML, CSS, JS framework)</li>
                     <li>log4php: <a href="https://logging.apache.org/log4php/">https://logging.apache.org/log4php/</a> (logger)</li>
-                    <li>(parsedown: <a href="http://parsedown.org/">http://parsedown.org/</a> (markdown parser))</li>
+                    <li>Parsedown: <a href="http://parsedown.org/">http://parsedown.org/</a> (markdown parser)</li>
                 </ul>
             </div>
         </div>

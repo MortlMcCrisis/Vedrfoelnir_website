@@ -1,7 +1,7 @@
 <?php
 require_once 'databaseConnector.php';
 
-addList($_GET['name']);
+addList($_GET['name'], $_GET['description']);
 
 goBack();
 

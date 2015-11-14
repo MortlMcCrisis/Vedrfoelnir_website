@@ -12,10 +12,10 @@ require_once 'databaseConnector.php';
 				<label for="name">Name:</label>
 				<input type="text" class="form-control" id="name" name="name" value="<?php echo $name; ?>"></input>
 			</div>
-			<!--<div class="form-group">
+			<div class="form-group">
 				<label for="description">Beschreibung:</label>
 				<textarea name="description" cols="35" rows="4" class="form-control" id="description"><?php echo $description; ?></textarea>
-			</div>-->
+			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 	</div>
