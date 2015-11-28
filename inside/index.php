@@ -18,6 +18,10 @@ $percent = ($doneTodoCount / ($doneTodoCount + $todoCount)) * 100;
 
 <div class="row">
         <div class="col-md-3">
+            <!--<a href="/inside/page_newTodo.php?listId=<?php echo $listId ?>" class="btn btn-default">Neues Todo</a>-->
+            <a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a>
+            <br>
+            <br>
             <div class="list-group">
                 <?php   
                         $lists = getLists();
@@ -50,9 +54,6 @@ $percent = ($doneTodoCount / ($doneTodoCount + $todoCount)) * 100;
                 $Parsedown = new Parsedown();
                 echo $Parsedown->text($listEntry->description);
             ?>
-            </br> 
-            <a href="/inside/page_newTodo.php?listId=<?php echo $listId ?>" class="btn btn-default">Neues Todo</a>
-            </br></br>
             <ul class="nav nav-tabs">
                 <li role="presentation" class="active"><a href="http://xn--vedrflnir-47a.de/inside?listId=<?php echo $listId; ?>">List</a></li>
                 <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside/page_doneTodos.php?listId=<?php echo $listId; ?>">Done</a></li>

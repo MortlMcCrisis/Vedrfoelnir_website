@@ -106,22 +106,9 @@
 						</p>-->
 						<h3>Pressetext</h3>
 						<p>
-							Vedrfölnir spielen einen abwechslungsreichen und experimentierfreudigen Extreme Folk Metal, wie
-                                                        die Band ihren Stil selbst nennt.<br>
-                                                        Thematisch handeln die Songs sowohl von Sagen der nordischen Mythologie, welche auch teils
-                                                        eigen interpretiert werden. Hierbei sind vor allem schnelle sowie melodiöse Riffs, Blastbeats und
-                                                        verschiedenen Folk-Elemente signifikant, denen durch sowohl von hohen Screams als auch tiefen
-                                                        Growls Ausdruck verliehen wird. Doch gibt es auch Songs, die eine ganz eigene Thematik
-                                                        aufweisen und so bspw. auch doom- und/oder blackmetallastig sein können. Auch das
-                                                        obligatorische Sauflied darf in diesem Genre natürlich nicht fehlen, denn spätestens bei diesem
-                                                        brechen beim Publikum alle Dämme und es wird mitgesungen, gemoshed und gebangt was das
-                                                        Zeug hält.<br>
-                                                        Schon in kurzer Zeit konnte die Band gute Platzierungen in einigen Bandcontests erreichen und
-                                                        nicht nur dadurch einige Auftritte, unter anderem bei einer selbst organisierten Tour absolvieren und
-                                                        damit auf sich aufmerksam machen. Durch den Verlust des Proberaumes und der angespannten
-                                                        beruflichen Rahmensituationen der Bandmitglieder, musste die Band eine unfreiwillige Pause
-                                                        einräumen. Doch dank eines neuen Proberaumes konnte wieder aktiv weiter gerarbeitet werden und
-                                                        so sind sie aktuell an ihrem ersten Silberling, mit dessen Erscheinen sie neu durchstarten wollen.
+							Vedrfölnir spielen einen abwechslungsreichen und experimentierfreudigen Extreme Folk Metal, wie die Band ihren Stil selbst nennt.<br>
+                                                        Thematisch handeln die Songs sowohl von Sagen der nordischen Mythologie, welche auch teils eigen interpretiert werden. Hierbei sind vor allem schnelle sowie melodiöse Riffs, Blastbeats und verschiedenen Folk-Elemente signifikant, denen durch sowohl von hohen Screams als auch tiefen Growls Ausdruck verliehen wird. Doch gibt es auch Songs, die eine ganz eigene Thematik aufweisen und so bspw. auch doom- und/oder blackmetallastig sein können. Auch das obligatorische Sauflied, darf in diesem Genre natürlich nicht fehlen, denn spätestens bei diesem brechen beim Publikum alle Dämme und es wird mitgesungen, gemoshed und gebangt was das Zeug hält.<br>
+                                                        Schon in kurzer Zeit konnte die Band gute Platzierungen in einigen Bandcontests erreichen und  nicht nur dadurch einige Auftritte, unter anderem bei einer selbst organisierten Tour absolvieren und damit auf sich aufmerksam machen. Durch den Verlust des Proberaumes und der angespannten beruflichen Rahmensituationen der Bandmitglieder, musste die Band eine unfreiwillige Pause einräumen. Doch dank eines neuen Proberaumes konnte wieder aktiv weiter gerarbeitet werden und so sind sie aktuell an ihrem ersten Silberling, mit dessen Erscheinen sie neu durchstarten wollen. 
 
 						</p>
 

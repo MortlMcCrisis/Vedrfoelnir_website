@@ -26,6 +26,14 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <?php 
+            require_once 'databaseConnector.php';
+
+            $listId = 1;
+            if (isset($_GET['listId'])){
+                    $listId = $_GET['listId'];
+            }
+        ?>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -38,27 +46,43 @@
           <a class="navbar-brand" href="#">Vedrf&ouml;lnir Orga</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-		    <ul class="nav navbar-nav">
-                        <li><a href="http://xn--vedrflnir-47a.de/inside?listId=1">Todos</a></li>
-			<?php
-				include_once 'databaseConnector.php';
-				
-				$contactLists = getContactLists();
-				
-				while($row = mysql_fetch_object($contactLists)){
-					echo "<li><a href=\"http://xn--vedrflnir-47a.de/inside/page_contacts.php?listId=".$row->id."\">".$row->name."</a></li>";
-				}
-			?>
-			<li><a href="http://xn--vedrflnir-47a.de/inside/page_orgaDocuments.php">Orga Dokumente</a></li>
-			<li><p class="navbar-btn"><a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a></p></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="http://xn--vedrflnir-47a.de/inside/database.log">Datenbank Log</a></li>
-                                <li><a href="http://xn--vedrflnir-47a.de/inside/page_technicalDocumentation.php">technische Dokumentation</a></li>
-                            </ul>
-                        </li>";
-                </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="http://xn--vedrflnir-47a.de/inside?listId=1">Todos</a></li>
+                <?php
+                        include_once 'databaseConnector.php';
+                        
+                        $contactLists = getContactLists();
+                        
+                        while($row = mysql_fetch_object($contactLists)){
+                                echo "<li><a href=\"http://xn--vedrflnir-47a.de/inside/page_contacts.php?listId=".$row->id."\">".$row->name."</a></li>";
+                        }
+                ?>
+                <li><a href="http://xn--vedrflnir-47a.de/inside/page_orgaDocuments.php">Orga Dokumente</a></li>
+                <!--<li><p class="navbar-btn"><a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a></p></li>-->
+                <li><p class="navbar-btn"><a href="/inside/page_newTodo.php?listId=<?php echo $listId ?>" class="btn btn-default">Neues Todo</a></p></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Admin<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://xn--vedrflnir-47a.de/inside/database.log">Datenbank Log</a></li>
+                        <li><a href="http://xn--vedrflnir-47a.de/inside/page_technicalDocumentation.php">technische Dokumentation</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><span class="glyphicon glyphicon-question-sign"></span></a>
+                </li>
+            </ul>
         </div>
       </div>
     </nav>
