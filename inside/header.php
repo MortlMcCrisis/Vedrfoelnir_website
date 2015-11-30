@@ -43,11 +43,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Vedrf&ouml;lnir Orga</a>
+          <a class="navbar-brand" href="http://xn--vedrflnir-47a.de/inside/index.php">Vedrf&ouml;lnir Orga</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="http://xn--vedrflnir-47a.de/inside?listId=1">Todos</a></li>
+                <li><a href="http://xn--vedrflnir-47a.de/inside/page_listTodos.php?listId=1">Todos</a></li>
                 <?php
                         include_once 'databaseConnector.php';
                         
@@ -58,7 +58,6 @@
                         }
                 ?>
                 <li><a href="http://xn--vedrflnir-47a.de/inside/page_orgaDocuments.php">Orga Dokumente</a></li>
-                <!--<li><p class="navbar-btn"><a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a></p></li>-->
                 <li><p class="navbar-btn"><a href="/inside/page_newTodo.php?listId=<?php echo $listId ?>" class="btn btn-default">Neues Todo</a></p></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

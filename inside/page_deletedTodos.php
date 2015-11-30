@@ -11,6 +11,9 @@ $listEntry = getListById($listId);
 
 <div class="row">
         <div class="col-md-3">
+            <a href="http://xn--vedrflnir-47a.de/inside/page_newList.php" class="btn btn-default">Neue Liste</a>
+            <br>
+            <br>
             <div class="list-group">
                 <?php
                         $lists = getLists();
@@ -25,7 +28,7 @@ $listEntry = getListById($listId);
                             if($row->id == $listId)
                                 $active = "active";
 
-                            echo "<a href=\"http://xn--vedrflnir-47a.de/inside?listId=".$row->id."\" class=\"list-group-item ".$active."\">
+                            echo "<a href=\"http://xn--vedrflnir-47a.de/inside/page_listTodos.php?listId=".$row->id."\" class=\"list-group-item ".$active."\">
                                     <h4 class=\"list-group-item-heading\">".$row->name." <span class=\"badge\">".getTodoCount($row->id)."</span></h4>
                                     <!--<p class=\"list-group-item-text\">...</p>-->
                                     <div class=\"progress\">
@@ -43,11 +46,8 @@ $listEntry = getListById($listId);
                 $Parsedown = new Parsedown();
                 echo $Parsedown->text($listEntry->description);
             ?>
-            </br> 
-            <a href="/inside/page_newTodo.php?listId=<?php echo $listId ?>" class="btn btn-default">Neues Todo</a>
-            </br></br>
             <ul class="nav nav-tabs">
-                <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside?listId=<?php echo $listId; ?>">List</a></li>
+                <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside/page_listTodos.php?listId=<?php echo $listId; ?>">List</a></li>
                 <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside/page_doneTodos.php?listId=<?php echo $listId; ?>">Done</a></li>
                 <li role="presentation" class="active"><a href="http://xn--vedrflnir-47a.de/inside/page_deletedTodos.php?listId=<?php echo $listId; ?>">Deleted</a></li>
             </ul>

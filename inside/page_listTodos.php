@@ -4,9 +4,16 @@
 <?php 
 require_once 'databaseConnector.php';
 
-$listId = $_GET['listId'];
+$listId = 1;
+if (isset($_GET['listId'])){
+	$listId = $_GET['listId'];
+}
 
 $listEntry = getListById($listId);
+
+$todoCount = getTodoCount($listId);
+$doneTodoCount = getDoneTodoCount($listId);
+$percent = ($doneTodoCount / ($doneTodoCount + $todoCount)) * 100;
 ?>
 
 <div class="row">
@@ -15,7 +22,7 @@ $listEntry = getListById($listId);
             <br>
             <br>
             <div class="list-group">
-                <?php
+                <?php   
                         $lists = getLists();
                         
                         while($row = mysql_fetch_object($lists)){
@@ -47,31 +54,49 @@ $listEntry = getListById($listId);
                 echo $Parsedown->text($listEntry->description);
             ?>
             <ul class="nav nav-tabs">
-                <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside/page_listTodos.php?listId=<?php echo $listId; ?>">List</a></li>
-                <li role="presentation" class="active"><a href="http://xn--vedrflnir-47a.de/inside/page_doneTodos.php?listId=<?php echo $listId; ?>">Done</a></li>
+                <li role="presentation" class="active"><a href="http://xn--vedrflnir-47a.de/inside?listId=<?php echo $listId; ?>">List</a></li>
+                <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside/page_doneTodos.php?listId=<?php echo $listId; ?>">Done</a></li>
                 <li role="presentation"><a href="http://xn--vedrflnir-47a.de/inside/page_deletedTodos.php?listId=<?php echo $listId; ?>">Deleted</a></li>
             </ul>
 		<table class="table table-striped">
 			<thead>
 				<tr>
+					<th class="col-md-1">Position</th>
 					<th class="col-md-3">Name</th>
-					<th class="col-md-7">Beschreibung</th>
+					<th class="col-md-6">Beschreibung</th>
 					<th class="col-md-2">Bearbeiten</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
-					$deletedTodos = getDoneTodos($listId);
-                                        $Parsedown = new Parsedown();
+					require_once 'databaseConnector.php';
 					
-					while($todo = mysql_fetch_object($deletedTodos)){
+					$todos = getOpenTodos($listId);
+                                        $Parsedown = new Parsedown();
+                                        
+					while($row = mysql_fetch_object($todos)){
 						echo "<tr>";
-						echo "<td>$todo->name</td>";
-						echo "<td>".$Parsedown->text($todo->description)."</td>";
+						echo "<td>$row->position</td>";
+						echo "<td>$row->name</td>";
+						echo "<td>".$Parsedown->text($row->description)."</td>";
 						echo "<td>
-								<button type=\"button\" class=\"btn btn-default btn-xs\" onClick=\"undo($listId, $todo->id)\">
-									undo
-								</button>
+								<div class=\"btn-group btn-group-xs\" role=\"group\">
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'up')\">
+										<span class=\"glyphicon glyphicon-arrow-up\"></span>
+									</button>
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'down')\">
+										<span class=\"glyphicon glyphicon-arrow-down\"></span>
+									</button>
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'edit')\">
+										<span class=\"glyphicon glyphicon-pencil\"></span>
+									</button>
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'done')\">
+										<span class=\"glyphicon glyphicon-ok\"></span>
+									</button>
+									<button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'delete')\">
+										<span class=\"glyphicon glyphicon-trash\"></span>
+									</button>
+								</div>
 							  </td>";
 						echo "</tr>";
 					}
@@ -82,8 +107,8 @@ $listEntry = getListById($listId);
 </div>
 
 <script>
-	function undo(listId, id){
-		window.location = 'action_undoTodos.php?listId=' + listId +'&id=' + id;
+	function doAction(listId, id, action){
+		window.location = 'action_listTodos.php?listId=' + listId + '&id=' + id + '&action=' + action;
 	}
 </script>
 
