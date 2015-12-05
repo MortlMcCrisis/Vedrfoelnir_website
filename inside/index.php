@@ -33,6 +33,14 @@
     <div class="col-md-4">        
         <div class="panel panel-default">
             <div class="panel-heading">
+                Mir zugewiesen
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
                 User Statistiken
             </div>
             <div class="panel-body">
@@ -55,7 +63,7 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <h3>Startseite</h3>
-                        Hier stehen die alle erledigten Todos. Für die Zukunft ist geplant hier die neuesten erledigten Todos anzuzeigen, anstehende Termine und Statistiken wer wieviel erledigt hat.
+                        Hier stehen die alle erledigten Todos. Für die Zukunft ist geplant hier die neuesten erledigten Todos anzuzeigen, die dem Benutzer zugewiesenen Todos, anstehende Termine und Statistiken wer wieviel erledigt hat.
                 </li>
             </ul>
         </div>    

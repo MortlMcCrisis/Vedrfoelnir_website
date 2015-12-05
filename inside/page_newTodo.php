@@ -1,17 +1,14 @@
 <?php include 'header.php'; ?>
 
 <?php
-require_once 'databaseConnector.php';
-
 $listId = $_GET['listId'];
 $idParam = "";
 $name = "";
 $description = "";
 
-if (isset($_GET['id'])) {
-	
+if (isset($_GET['id']))
+{	
 	$id = $_GET['id'];
-	
 	$idParam = '<input type="hidden" name="id" value="'.$id.'">';
 	
 	$todo = getTodoById($id);
@@ -32,11 +29,9 @@ $lists = getLists();
                         <label for="listId">Liste:</label>
                             <select class="form-control" name="listId" id="listId">
                             <?php
-                            while($row = mysql_fetch_object($lists)){
-                                $selected = "";
-                                if($row->id==$listId){
-                                    $selected = " selected";
-                                }
+                            while($row = mysql_fetch_object($lists))
+                            {
+                                $selected = ($row->id==$listId ? "selected" : "");
                                 echo "<option value=\"".$row->id."\"".$selected.">".$row->name."</option>";
                             }
                             ?>

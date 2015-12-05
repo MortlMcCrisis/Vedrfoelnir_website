@@ -1,3 +1,6 @@
+<?php require_once 'databaseConnector.php'; ?>
+<?php require_once 'parsedown/Parsedown.php'; ?>
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -26,14 +29,6 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <?php 
-            require_once 'databaseConnector.php';
-
-            $listId = 1;
-            if (isset($_GET['listId'])){
-                    $listId = $_GET['listId'];
-            }
-        ?>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -49,8 +44,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="http://xn--vedrflnir-47a.de/inside/page_listTodos.php?listId=1">Todos</a></li>
                 <?php
-                        include_once 'databaseConnector.php';
-                        
+                        $listId = (isset($_GET['listId']) ? $_GET['listId'] : 1);
                         $contactLists = getContactLists();
                         
                         while($row = mysql_fetch_object($contactLists)){
