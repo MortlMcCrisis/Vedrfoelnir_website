@@ -101,7 +101,7 @@ function getDoneTodos($listId){
 }
 
 function getRecentlyChangedTodosDesc(){
-	$sqlFetch = 'SELECT * FROM todos ORDER BY last_changed DESC LIMIT 10';
+	$sqlFetch = 'SELECT * FROM todos ORDER BY last_changed DESC LIMIT 20';
 	return executeSql($sqlFetch);
 }
 

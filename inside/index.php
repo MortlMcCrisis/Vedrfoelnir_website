@@ -14,9 +14,12 @@
             <ul class="list-group">
                 <?php
                     $todos = getRecentlyChangedTodosDesc();
-                        
+                    
+                    $counter=0;
                     while($todoRow = mysql_fetch_object($todos)){
-                        echo "<li class=\"list-group-item\">".date("d.m.Y H:i:s", $todoRow->last_changed)." ".$todoRow->name;
+                    
+                        echo "<li style=\"color:rgb($counter,$counter,$counter)\" class=\"list-group-item\">".date("d.m.Y H:i:s", $todoRow->last_changed)." ".$todoRow->name;
+                        $counter+=12;
                         if($todoRow->deleted==1)
                         {
                             echo " (deleted)";
