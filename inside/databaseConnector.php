@@ -61,10 +61,11 @@ function getLists(){
 function addTodo($listId, $name, $description){
 	$newPosition = getLowestTodo($listId)->position+1;
 			
-	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."');";
+        $timeStamp = time();
+	$sqlInsert = "INSERT INTO todos (id, position, name, description, listId, last_changed) VALUES (NULL, '".$newPosition."', '".$name."', '".$description."', '".$listId."', '".$timeStamp."');";
 	executeSql($sqlInsert);
 	
-	logMessage("Added todo: (listId='".$listId."' name='".$name."' description=".$description.")");
+	logMessage("Added todo: (listId='".$listId."' name='".$name."' description='".$description."' timestamp='".$timeStamp.")");
 }
 
 function getTodoCount($listId){
@@ -122,10 +123,11 @@ function getAllTodosAbovePosition($listId, $position){
 function updateTodo($id, $attribute, $value){
 	$todo = getTodoById($id);
 	
-	logMessage("Updated todo: (id='".$todo->id."' listId='".$todo->listId."' name='".$todo->name."' description='".$todo->description."') -> (".$attribute."='".$value."')");
 	
-	$sqlUpdate = "UPDATE todos SET ".$attribute."='".$value."' WHERE id=".$id;
-	echo $sqlUpdate;
+	logMessage("Updating todo: (id='".$todo->id."' listId='".$todo->listId."' name='".$todo->name."' description='".$todo->description."') -> (".$attribute."='".$value."' timestamp='".$todo->timestamp."'), new value: (".$attribute."='".$value."')");
+	
+	$timeStamp = time();
+	$sqlUpdate = "UPDATE todos SET ".$attribute."='".$value."', last_changed='".$timeStamp."' WHERE id=".$id;
 	executeSql($sqlUpdate);
 }
 //-----------------END TODOS---------------------
