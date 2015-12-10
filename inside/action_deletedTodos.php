@@ -9,6 +9,7 @@ goBack($listId);
 
 function recover($listId, $id){
 	updateTodo($id, "deleted", "0");
+        updateTodo($id, "last_changed", time());
 	
 	$lowestTodo = getLowestTodo($listId);
 	updateTodo($id, "position", $lowestTodo->position+1);

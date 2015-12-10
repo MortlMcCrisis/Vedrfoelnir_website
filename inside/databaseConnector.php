@@ -126,8 +126,7 @@ function updateTodo($id, $attribute, $value){
 	
 	logMessage("Updating todo: (id='".$todo->id."' listId='".$todo->listId."' name='".$todo->name."' description='".$todo->description."') -> (".$attribute."='".$value."' timestamp='".$todo->timestamp."'), new value: (".$attribute."='".$value."')");
 	
-	$timeStamp = time();
-	$sqlUpdate = "UPDATE todos SET ".$attribute."='".$value."', last_changed='".$timeStamp."' WHERE id=".$id;
+	$sqlUpdate = "UPDATE todos SET ".$attribute."='".$value."' WHERE id=".$id;
 	executeSql($sqlUpdate);
 }
 //-----------------END TODOS---------------------
