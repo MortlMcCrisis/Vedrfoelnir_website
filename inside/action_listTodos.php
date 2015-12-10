@@ -55,6 +55,7 @@ function done($listId, $id){
 	$deletedTodo = getTodoById($id);
 	updateTodo($id, "done", "1");
 	updateTodo($id, "position", "-1");
+	updateTodo($id, "last_changed", time());
 	
 	$allTodos = getAllTodosAbovePosition($listId, $deletedTodo->position);
 	while($todo = mysql_fetch_object($allTodos)){
@@ -66,6 +67,7 @@ function delete($listId, $id){
 	$deletedTodo = getTodoById($id);
 	updateTodo($id, "deleted", "1");
 	updateTodo($id, "position", "-1");
+        updateTodo($id, "last_changed", time());
 	
 	$allTodos = getAllTodosAbovePosition($listId, $deletedTodo->position);
 	while($todo = mysql_fetch_object($allTodos)){

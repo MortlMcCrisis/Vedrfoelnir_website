@@ -12,6 +12,7 @@ if (isset($_GET['id'])){
 	updateTodo($id, 'name', $_GET['name']);
 	updateTodo($id, 'description', $_GET['description']);
         updateTodo($id, 'position', ($lowestTodo->position + 1));
+        updateTodo($id, "last_changed", time());
 	
 	echo $oldTodo->listId." ".$oldTodo->position." ";
 	

@@ -79,7 +79,6 @@ function getDoneTodoCount($listId){
 	return $menge[0];
 }
 
-
 function getTodoById($id){
 	$sqlFetch = "SELECT * FROM todos WHERE id=".$id;
 	return mysql_fetch_object(executeSql($sqlFetch));
@@ -97,6 +96,11 @@ function getLowestTodo($listId){
 
 function getDoneTodos($listId){
 	$sqlFetch = 'SELECT * FROM todos WHERE done=1 AND listId='.$listId;
+	return executeSql($sqlFetch);
+}
+
+function getRecentlyChangedTodosDesc(){
+	$sqlFetch = 'SELECT * FROM todos ORDER BY last_changed DESC LIMIT 10';
 	return executeSql($sqlFetch);
 }
 

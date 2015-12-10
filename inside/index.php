@@ -13,17 +13,23 @@
               <!-- List group -->
             <ul class="list-group">
                 <?php
-                    require_once 'databaseConnector.php';
-                    
-                    $listIds = getLists();
-                    
-                    while($listRow = mysql_fetch_object($listIds)){
-                    
-                        $todos = getDoneTodos($listRow->id);
+                    $todos = getRecentlyChangedTodosDesc();
                         
-                        while($todoRow = mysql_fetch_object($todos)){
-                            echo "<li class=\"list-group-item\">".$todoRow->name."</li>";
+                    while($todoRow = mysql_fetch_object($todos)){
+                        echo "<li class=\"list-group-item\">".date("d.m.Y H:i:s", $todoRow->last_changed)." ".$todoRow->name;
+                        if($todoRow->deleted==1)
+                        {
+                            echo " (deleted)";
                         }
+                        elseif($todoRow->done==1)
+                        {
+                            echo " (done)";
+                        }
+                        else
+                        {
+                            echo " (edited)";
+                        }
+                        echo "</li>";
                     }
                 ?>
             </ul>
@@ -52,14 +58,21 @@
             <div class="panel-heading">
                 Anstehende Termine
             </div>
-            <div class="panel-body">
-            </div>
+            <ul class="list-group">
+                <li class="list-group-item">Juzekonzert: 12. oder 26. März</li>
+            </ul>
         </div>
         
         <div class="panel panel-default">
             <div class="panel-heading">
                 Neue Features
             </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Zuletzt bearbeitete Todos auf der Startseite</h3>
+                    Hier werden ab sofort die 10 letzten Todos die bearbeitet, erledigt oder gelöscht wurden. Zukünftig werden auch die User angezeigt die das Todo bearbeitet haben.
+                </li>
+            </ul>
             <ul class="list-group">
                 <li class="list-group-item">
                     <h3>Startseite</h3>
