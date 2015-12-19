@@ -18,7 +18,7 @@
                     $counter=0;
                     while($todoRow = mysql_fetch_object($todos)){
                     
-                        echo "<li style=\"color:rgb($counter,$counter,$counter)\" class=\"list-group-item\">".date("d.m.Y H:i:s", $todoRow->last_changed)." ".$todoRow->name;
+                        echo "<li style=\"color:rgb($counter,$counter,$counter)\" class=\"list-group-item\">".date("d.m.Y H:i:s", $todoRow->last_changed)." <a href=\"http://xn--vedrflnir-47a.de/inside/action_listTodos.php?listId=$todoRow->listId&id=$todoRow->id&action=edit\">$todoRow->name</a>";
                         $counter+=12;
                         if($todoRow->deleted==1)
                         {

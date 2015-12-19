@@ -66,7 +66,8 @@
                                             while($row = mysql_fetch_object($todos)){
                                                     echo "<tr>";
                                                     echo "<td>$row->position</td>";
-                                                    echo "<td>$row->name</td>";
+                                                    //echo "<td>$row->name</td>";
+                                                    echo "<td><a href=\"http://xn--vedrflnir-47a.de/inside/action_listTodos.php?listId=$listId&id=$row->id&action=edit\">$row->name</a></td>";
                                                     echo "<td>".$Parsedown->text($row->description)."</td>";
                                                     echo "<td>
                                                                     <div class=\"btn-group btn-group-xs\" role=\"group\">
@@ -75,9 +76,6 @@
                                                                             </button>
                                                                             <button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'down')\">
                                                                                     <span class=\"glyphicon glyphicon-arrow-down\"></span>
-                                                                            </button>
-                                                                            <button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'edit')\">
-                                                                                    <span class=\"glyphicon glyphicon-pencil\"></span>
                                                                             </button>
                                                                             <button type=\"button\" class=\"btn btn-default\" onClick=\"doAction($listId, $row->id, 'done')\">
                                                                                     <span class=\"glyphicon glyphicon-ok\"></span>

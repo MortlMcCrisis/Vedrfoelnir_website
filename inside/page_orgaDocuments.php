@@ -74,8 +74,59 @@
                         <td>ljgkaefer@gmail.de</td>
                         <td>Runzstraße 48</td>
                     </tr>
+                    <tr>
+                        <td>Thorsten Engesser</td>
+                        <td>0151 64945710</td>
+                        <td>thorsten.engesser@gmail.de</td>
+                        <td>Ferdinand-Weiß-Straße 7</td>
+                    </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            Nützliche Links / Anleitungen zu verschiedenen Themen
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <table class="table table-striped">
+			<thead>
+				<tr>
+					<th class="col-md-4">Name</th>
+					<th class="col-md-8">Beschreibung</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+                                    <td>Wie man Demo - CDs an Labels versendet - Teil 1</td>
+                                    <td><p><a href="http://www.delamar.de/tutorials/demotapes-verschicken-nachtrag-zum-podcast-855/">http://www.delamar.de/tutorials/demotapes-verschicken-nachtrag-zum-podcast-855/</a></p>
+<p>(+Audio Podcast auf der Seite anhören!)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Wie man Demo - CDs an Labels versendet - Teil 2 - Aufbau / Struktur</td>
+                                    <td><p><a href="http://www.delamar.de/tutorials/demotapes-verschicken-nachtrag-zum-podcast-855/">http://www.delamar.de/tutorials/demotapes-verschicken-nachtrag-zum-podcast-855/</a></p></td>
+                                </tr>
+                                <tr>
+                                    <td>Bei einem Label bewerben - Teil 1 -  Die Zielsetzung für die Band</td>
+                                    <td><p><a href="http://www.bonedo.de/artikel/einzelansicht/ar-special-teil-2.html">http://www.bonedo.de/artikel/einzelansicht/ar-special-teil-2.html</a></p></td>
+                                </tr>
+                                <tr>
+                                    <td>Bei einem Label bewerben - Teil 2 - Die Checkliste: Der 10-Punkte-Plan</td>
+                                    <td><p><a href="http://www.bonedo.de/artikel/einzelansicht/das-ar-special-teil-1.html">http://www.bonedo.de/artikel/einzelansicht/das-ar-special-teil-1.html</a></p></td>
+                                </tr>
+                                <tr>
+                                    <td>Mehr Auftritte bekommen - 15 Tipps</td>
+                                    <td><p><a href="http://www.delamar.de/musikbusiness/mehr-auftritte-fuer-deine-band-15-tipps-die-sich-lohnen-4973/">http://www.delamar.de/musikbusiness/mehr-auftritte-fuer-deine-band-15-tipps-die-sich-lohnen-4973/</a></p></td>
+                                </tr>
+                                <tr>
+                                    <td>Selbstvermarktung - Leitfaden</td>
+                                    <td><p><a href="http://www.delamar.de/musikbusiness/leitfaden-selbstvermarktung-8790/">http://www.delamar.de/musikbusiness/leitfaden-selbstvermarktung-8790/</a></p></td>
+                                </tr>	
+			</tbody>
+		</table>
+            </div>
         </div>
     </div>
 </div>
