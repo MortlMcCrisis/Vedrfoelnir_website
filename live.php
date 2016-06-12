@@ -33,11 +33,9 @@
 					<div id="left">
 						<h2>Live</h2>
 						<div id="concert">Upcoming shows:</div>
-						<div class="maingig">none</div>
-						<div id="concert">Past concerts:</div>
 						<div class="maingig">
-											<table>
-								<?php
+                                                    <table>
+                                                        <?php
 									include 'databaseSettings.php';
 	
 									# Verbindungsaufbau
@@ -47,8 +45,38 @@
 											$ergebnis = mysql_query($abfrage);
 											while($row = mysql_fetch_object($ergebnis)){
 												$timestamp = strtotime($row->date);
-												$formatted_time = date( "d.m.Y", $timestamp);
-												echo "<tr><td>$formatted_time</td><td>$row->event, $row->location</td><td class=\"right\">$row->city</td></tr>";
+												if( $timestamp > time() ){
+                                                                                                    $formatted_time = date( "d.m.Y", $timestamp);
+                                                                                                    echo "<tr><td>$formatted_time</td><td>$row->event, $row->location</td><td class=\"right\">$row->city</td></tr>";
+                                                                                                }
+											}
+										}
+										else {
+											echo 'Stay tuned. Bald kommen hier die neusten Infos.';
+
+										}
+									}
+									else {
+										echo 'Stay tuned. Bald kommen hier die neusten Infos.';
+									}
+								?>
+                                                    </table><br><br>
+						</div>
+						<div id="concert">Past concerts:</div>
+						<div class="maingig">
+                                                        <table>
+								<?php
+									# Verbindungsaufbau
+									if(mysql_connect($db_server, $db_benutzer, $db_passwort)) {
+										if(mysql_select_db($db_name)) {
+											$abfrage = "SELECT date, event, location, city FROM gigs ORDER BY date DESC";
+											$ergebnis = mysql_query($abfrage);
+											while($row = mysql_fetch_object($ergebnis)){
+												$timestamp = strtotime($row->date);
+												if( $timestamp < time() ){
+                                                                                                    $formatted_time = date( "d.m.Y", $timestamp);
+                                                                                                    echo "<tr><td>$formatted_time</td><td>$row->event, $row->location</td><td class=\"right\">$row->city</td></tr>";
+                                                                                                }
 											}
 										}
 										else {

@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
             <div class="col-md-12">
-                <a href="#">Stage Rider</a>
+                <a href="http://xn--vedrflnir-47a.de/inside/resourcen/VedrfoelnirStagerider.pdf">Stage Rider</a>
             </div>
         </div>
     </div>

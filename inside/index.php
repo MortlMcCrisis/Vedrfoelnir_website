@@ -62,7 +62,7 @@
                 Anstehende Termine
             </div>
             <ul class="list-group">
-                <li class="list-group-item">Juzekonzert: 12. oder 26. März</li>
+                <li class="list-group-item">Juzekonzert: 12. März</li>
             </ul>
         </div>
         
@@ -70,6 +70,12 @@
             <div class="panel-heading">
                 Neue Features
             </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Stagerider</h3>
+                    Der Stagerider ist jetzt unter <a href="http://vedrfoelnir.de/inside/page_orgaDocuments.php">Orga Dokumente</a> zu finden
+                </li>
+            </ul>
             <ul class="list-group">
                 <li class="list-group-item">
                     <h3>Zuletzt bearbeitete Todos auf der Startseite</h3>
