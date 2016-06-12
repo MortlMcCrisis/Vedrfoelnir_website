@@ -43,13 +43,15 @@
 										if(mysql_select_db($db_name)) {
 											$abfrage = "SELECT date, event, location, city FROM gigs ORDER BY date DESC";
 											$ergebnis = mysql_query($abfrage);
+											$lines = "";
 											while($row = mysql_fetch_object($ergebnis)){
 												$timestamp = strtotime($row->date);
 												if( $timestamp > time() ){
                                                                                                     $formatted_time = date( "d.m.Y", $timestamp);
-                                                                                                    echo "<tr><td>$formatted_time</td><td>$row->event, $row->location</td><td class=\"right\">$row->city</td></tr>";
+                                                                                                    $lines = "<tr><td>$formatted_time</td><td>$row->event, $row->location</td><td class=\"right\">$row->city</td></tr>".$lines;
                                                                                                 }
 											}
+											echo $lines;
 										}
 										else {
 											echo 'Stay tuned. Bald kommen hier die neusten Infos.';
